@@ -16,7 +16,7 @@
     "prebuild": "npm run lint && npm run depcheck && rimraf ./dist && mkdirp ./dist/",
     "prepublish": "npm run build",
     "release": "np",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.1.5",
     "@babel/register": "^7.0.0",
+    "ava": "1.0.0-rc.2",
     "coveralls": "^3.0.2",
     "dependency-check": "^3.2.1",
     "eslint": "^5.9.0",

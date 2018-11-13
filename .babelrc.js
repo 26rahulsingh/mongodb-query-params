@@ -6,7 +6,7 @@ module.exports = {
         targets: {
           node: 'current',
         },
-      },
+      }
     ],
   ],
   plugins: ['@babel/plugin-proposal-object-rest-spread'],
