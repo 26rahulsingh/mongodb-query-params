@@ -1,0 +1,41 @@
+{
+  "name": "mongodb-query-params",
+  "version": "1.0.0",
+  "description": "Convert NodeJS API urls query parameters to MongoDB queries",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "babel ./src/index.js --out-file ./dist/index.js",
+    "coverage": "nyc npm test && nyc report --reporter=html",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "depcheck": "dependency-check ./package.json --no-default-entry ./src/index.js",
+    "lint": "eslint ./src ./test",
+    "postcoveralls": "rimraf ./coverage",
+    "prebuild": "npm run lint && npm run depcheck && rimraf ./dist && mkdirp ./dist/",
+    "prepublish": "npm run build",
+    "release": "np",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/26rahulsingh/mongodb-query-params.git"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "query",
+    "parameters",
+    "mongodb"
+  ],
+  "author": "Rahul Singh <singh.rahul26@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/26rahulsingh/mongodb-query-params/issues"
+  },
+  "homepage": "https://github.com/26rahulsingh/mongodb-query-params#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0"
+  }
+}
