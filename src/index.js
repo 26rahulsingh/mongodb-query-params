@@ -223,3 +223,5 @@ const mqp = (query = '', options = {}) => {
 };
 
 module.exports = mqp;
+
+// run test cases
